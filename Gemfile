@@ -14,3 +14,7 @@ gem "rake", "~> 13.0"
 gem "pg", "~> 1.2"
 gem "database_cleaner-active_record", "~> 2.0"
 gem "rack", "~> 2.2"
+
+gem "webrick", "~> 1.7"
+
+gem "puma", "~> 5.4"

@@ -1,10 +1,14 @@
-require_relative '../spec_helper.rb'
+# require 'spec_helper'
+require 'spec_helper'
+
+
 feature 'A new user can sign up ' do
     
     
     
     scenario 'a user can sign up ' do
         visit('/')
+        # puts page.body
         click_on('Sign Up')
         expect(page.current_path).to eq('/users/new')
         fill_in('email', with:'test@test.com')
