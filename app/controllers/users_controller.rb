@@ -11,8 +11,8 @@ class AirBnb < Sinatra::Base
     end
 
     post '/users' do 
-
-# create the user things
+      # create the user things
+      # redirect (:index)
     end
 
 

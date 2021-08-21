@@ -1,15 +1,12 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: database_name
+  database: airbnb_development
   pool: 2
-  username: your_username
-  password: your_password
 
-production:
+
+test:
   adapter: postgresql
   encoding: unicode
-  database: database_name
+  database: airbnb_test
   pool: 2
-  username: your_username
-  password: your_password
