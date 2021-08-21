@@ -1,2 +1,4 @@
-require './app/app.rb'
+# frozen_string_literal: true
+
+require './app/app'
 run AirBnb

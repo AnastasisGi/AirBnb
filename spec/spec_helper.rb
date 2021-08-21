@@ -1,10 +1,6 @@
-# require 'simplecov'
-# require 'simplecov-console'
-# require 'capybara/rspec'
-# require '../app/app.rb'
-# require_relative 'support/database_cleaner'
-
+# frozen_string_literal: true
 
 require 'capybara/rspec'
 require './app/app'
+require_relative './support/database_cleaner'
 Capybara.app = AirBnb
