@@ -1,8 +1,13 @@
 # frozen_string_literal: true
-
+require 'sinatra/flash'
 require 'sinatra/activerecord'
 require_relative '../models/user'
+
+
+
+
 class AirBnb < Sinatra::Base
+  register Sinatra::Flash
   enable :sessions
   get '/' do
     erb(:index)
@@ -30,6 +35,7 @@ class AirBnb < Sinatra::Base
       session[:user_id] = user.id
       redirect '/'
     else
+      flash[:error]=ERROR_LIST[:login_error]
       redirect 'sessions/new'
     end
   end

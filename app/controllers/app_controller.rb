@@ -9,4 +9,13 @@ class AirBnb < Sinatra::Base
   def current_user
     User.find_by(id: session[:user_id])
   end
+
+
+  ERROR_LIST={
+:login_error=>"Failed,please check the input details"
+
+}
+
+
+  
 end

@@ -3,7 +3,7 @@
 require 'rack'
 require 'sinatra/base'
 require 'sinatra/activerecord'
-
+require 'sinatra/flash'
 # require_relative 'models/user'
 
 require_relative 'models/user'
