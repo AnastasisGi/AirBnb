@@ -12,7 +12,6 @@ feature 'A new user can sign up ' do
     fill_in('password', with: 'password123')
     fill_in('password confirmation', with: 'password123')
     click_button('Sign Up')
-    # binding.pry
     expect(page.current_path).to eq('/')
     expect(page).not_to have_link('Sign Up', href: '/users/new')
     expect(page).not_to have_link('Log in', href: '/sessions/new')
