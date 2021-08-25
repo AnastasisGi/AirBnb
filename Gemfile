@@ -14,11 +14,8 @@ gem 'rake', '~> 13.0'
 gem 'rspec', '~> 3.10'
 gem 'sinatra', '~> 2.1'
 gem 'sinatra-activerecord', '~> 2.0'
-
 gem 'webrick', '~> 1.7'
-
 gem 'puma', '~> 5.4'
-
 gem 'bcrypt', '~> 3.1'
-
 gem 'sinatra-flash', '~> 0.3.0'
+gem "factory_bot", "~> 6.2"
