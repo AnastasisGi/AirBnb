@@ -1,17 +1,14 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-
-feature 'Sessions  ' do
-  let(:username) { 'testuser' }
-  let(:email) { 'test66@test.com' }
+feature 'Sessions' do
   let(:password) { 'atestpassword' }
-  let(:user) { User.new(username: username, password: password) }
+  let(:user){create(:user)}
   before do
     user.password = password
     user.save!
   end
-
+  
   scenario 'a user can sign in ' do
     visit('/')
     click_on('Log In')
