@@ -3,11 +3,13 @@
 require 'sinatra/flash'
 require 'sinatra/activerecord'
 require_relative '../models/user'
+require_relative '../models/space'
 
 class AirBnb < Sinatra::Base
   register Sinatra::Flash
   enable :sessions, :method_override
   get '/' do
+    @spaces=Space.all
     erb(:index)
   end
 
@@ -31,6 +33,7 @@ class AirBnb < Sinatra::Base
     user = User.authenticate(username: params[:username], password: params[:password])
     if user
       session[:user_id] = user.id
+
       redirect '/'
     else
       flash[:error] = ERROR_LIST[:login_error]

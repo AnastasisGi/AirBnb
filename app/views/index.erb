@@ -11,12 +11,23 @@
       <input type="hidden" name="_method" value="delete">
       <button type="submit">Log Out!</button>
       </form>
-
-
-
+      <form action="/spaces/new" method="GET">
+      <button type="submit">Upload space</button>
+      </form>
     <% else %>
       <a href="/users/new">Sign Up</a>  <a href="/sessions/new">Log In</a>
     <h1>Welcome</h1>
     <% end %>
+
+
+
+    <%@spaces.each do |space|%>
+      <%=space.name%>
+      <p>
+      <%=space.description%>
+ <p>
+      <%=space.price%>
+
+    <%end%>
   </body>
 </html> 

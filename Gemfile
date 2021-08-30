@@ -19,3 +19,5 @@ gem 'puma', '~> 5.4'
 gem 'bcrypt', '~> 3.1'
 gem 'sinatra-flash', '~> 0.3.0'
 gem "factory_bot", "~> 6.2"
+
+gem "betterlorem", "~> 0.1.2"
